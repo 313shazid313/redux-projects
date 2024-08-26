@@ -2,7 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteBook } from "../features/bookSlice";
 
 const BookList = ({ onHandleEdit }) => {
-  const books = useSelector((state) => state.booksR.books);
+  // ! method 1 without destructuring objects
+  // const books = useSelector((state) => state.booksR.books);
+   // ! method 2 with destructuring objects
+  const { books } = useSelector((state) => state.booksR);
 
   console.log(books);
   const dispatch = useDispatch();
@@ -26,8 +29,8 @@ const BookList = ({ onHandleEdit }) => {
               <>
                 <li>
                   {" "}
-                  Book Name : {book.title} by {book.author}
-                  {" "}Price : ${book.price} |||| Amount : {book.quantity}{" "}
+                  Book Name : {book.title} by {book.author} Price : $
+                  {book.price} |||| Amount : {book.quantity}{" "}
                   <button
                     onClick={() => {
                       handleEdit(book);
