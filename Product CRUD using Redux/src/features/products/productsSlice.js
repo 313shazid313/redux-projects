@@ -42,7 +42,7 @@ export const createProduct = createAsyncThunk(
 export const updateProduct = createAsyncThunk(
   "products/updateProduct",
   async (id, product) => {
-    const res = await axios.patch(`${URL}/${id}`, product);
+    const res = await axios.put(`${URL}/${id}`, product);
     // return res.data;
     console.log(res.data)
   }

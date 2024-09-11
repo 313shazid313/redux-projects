@@ -41,6 +41,20 @@
       "description": "The Eyeshadow Palette with Mirror offers a With a built-in mirror, it's convenient for on-the-go makeup application.bottomG",
       "category": "beauty",
       "price": 19.99
+    },
+    {
+      "id": "c3e8",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "topg i am",
+      "category": "beauty",
+      "price": 19.99
+    },
+    {
+      "id": "91aa",
+      "title": " ki jani",
+      "description": "topg i am",
+      "category": "beauty",
+      "price": 19.99
     }
   ]
 }
