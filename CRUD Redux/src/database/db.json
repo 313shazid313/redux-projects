@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      "category": "beauty",
+      "price": 19.99
+    },
+    {
+      "id": "4cb6",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirrotunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      "category": "beautyasdda",
+      "price": 19.99
+    },
+    {
+      "id": "3eef",
+      "title": "fdgdfg",
+      "description": "dfgdfgd",
+      "category": "gdfgdfg",
+      "price": "546456"
+    },
+    {
+      "id": "8610",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirror offers a With a built-in mirror, it's convenient for on-the-go makeup application.",
+      "category": "beauty",
+      "price": 19.99
+    },
+    {
+      "id": "542f",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirror offers a With a built-in mirror, it's convenient for on-the-go makeup application.",
+      "category": "beauty",
+      "price": 19.99
+    },
+    {
+      "id": "2003",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirror offers a With a built-in mirror, it's convenient for on-the-go makeup application.bottomG",
+      "category": "beauty",
+      "price": 19.99
+    }
+  ]
+}
