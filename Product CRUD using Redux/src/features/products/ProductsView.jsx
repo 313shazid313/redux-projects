@@ -15,7 +15,6 @@ const ProductsView = ({ onHandleSetProductEdt }) => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-
   const handleEdit = (product) => {
     onHandleSetProductEdt(product);
     console.log(product);
@@ -31,36 +30,34 @@ const ProductsView = ({ onHandleSetProductEdt }) => {
         <section>
           {products.map((product) => {
             return (
-              <>
-                <article key={product.id}>
-                  <div className="card">
-                    <div className="card-header">Products</div>
-                    <div className="card-body">
-                      <h5 className="card-title">{product.title}</h5>
-                      <p className="card-text">{product.description}</p>
-                      <h3 className="card-text">{product.category}</h3>
-                      <h4 className="card-text">Price : {product.price}</h4>
-                      <button
-                        type="button"
-                        className="btn btn-outline-primary"
-                        onClick={() => handleEdit(product)}
-                      >
-                        Edit
-                      </button>{" "}
-                      &nbsp; &nbsp; &nbsp; &nbsp;
-                      <button
-                        type="button"
-                        className="btn btn-outline-danger"
-                        onClick={() => {
-                          dispatch(deleteProduct(product.id));
-                        }}
-                      >
-                        Delete
-                      </button>
-                    </div>
+              <article key={product.id}>
+                <div className="card">
+                  <div className="card-header">Products</div>
+                  <div className="card-body">
+                    <h5 className="card-title">{product.title}</h5>
+                    <p className="card-text">{product.description}</p>
+                    <h3 className="card-text">{product.category}</h3>
+                    <h4 className="card-text">Price : {product.price}</h4>
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => handleEdit(product)}
+                    >
+                      Edit
+                    </button>{" "}
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button
+                      type="button"
+                      className="btn btn-outline-danger"
+                      onClick={() => {
+                        dispatch(deleteProduct(product.id));
+                      }}
+                    >
+                      Delete
+                    </button>
                   </div>
-                </article>
-              </>
+                </div>
+              </article>
             );
           })}
         </section>

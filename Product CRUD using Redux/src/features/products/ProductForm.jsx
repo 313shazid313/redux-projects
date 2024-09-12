@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { createProduct, updateProduct } from "./productsSlice";
 import { nanoid } from "nanoid";
+import "react-toastify/dist/ReactToastify.css";
 
 // eslint-disable-next-line react/prop-types
 const ProductForm = ({ trgetProduct = {}, onisEdit = false }) => {
@@ -17,10 +18,10 @@ const ProductForm = ({ trgetProduct = {}, onisEdit = false }) => {
   useEffect(() => {
     if (trgetProduct) {
       setProduct({
-        title: trgetProduct.title,
-        description: trgetProduct.description,
-        category: trgetProduct.category,
-        price: trgetProduct.price,
+        title: trgetProduct.title ?? "",
+        description: trgetProduct.description ?? "",
+        category: trgetProduct.category ?? "",
+        price: trgetProduct.price ?? "",
       });
     }
   }, [trgetProduct]);
