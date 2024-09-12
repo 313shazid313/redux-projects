@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { createProduct, updateProduct } from "./productsSlice";
+import { nanoid } from "nanoid";
 
 // eslint-disable-next-line react/prop-types
 const ProductForm = ({ trgetProduct = {}, onisEdit = false }) => {
   const dispatch = useDispatch();
-
-  //? using nanoid
 
   const [product, setProduct] = useState({
     title: "",
@@ -37,12 +36,10 @@ const ProductForm = ({ trgetProduct = {}, onisEdit = false }) => {
     e.preventDefault();
 
     if (onisEdit) {
-      // ? one way
-      // dispatch(updateProduct(product.id, product));
-      // ? another way
       dispatch(updateProduct({ id: trgetProduct.id, product: product }));
     } else {
-      dispatch(createProduct({ ...product }));
+      const newProduct = { id: nanoid(), ...product };
+      dispatch(createProduct(newProduct));
     }
   };
 
