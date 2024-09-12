@@ -7,18 +7,17 @@ function App() {
   //? productForm component to update product
 
   const [isEdit, setIsEdit] = useState(false);
-  const [updateProduct, setUpdateProduct] = useState({});
+  const [trgetProduct, setTargetProduct] = useState({});
 
-  const HandleSetProductEdt = (product) => {
-    setUpdateProduct(product);
-    // console.log(product); //! target product
-    //
+  const HandleSetProductEdt = (product) => {  
+    setTargetProduct(product);
+    console.log(product); //! target product
     setIsEdit(true);
   };
 
   return (
     <>
-      <ProductForm onupdateProduct={updateProduct} onisEdit={isEdit} />
+      <ProductForm trgetProduct={trgetProduct} onisEdit={isEdit} />
       <ProductsView onHandleSetProductEdt={HandleSetProductEdt} />
     </>
   );

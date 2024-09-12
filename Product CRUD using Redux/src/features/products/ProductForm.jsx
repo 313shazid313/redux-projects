@@ -1,38 +1,30 @@
 import { useState, useEffect } from "react";
-import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
-import { createProduct } from "./productsSlice";
-import { updateProduct } from "./productsSlice";
+import { createProduct, updateProduct } from "./productsSlice";
 
 // eslint-disable-next-line react/prop-types
-const ProductForm = ({ onupdateProduct = {}, onisEdit = false }) => {
-  // console.log(onupdateProduct);
-  console.log(onisEdit);
+const ProductForm = ({ trgetProduct = {}, onisEdit = false }) => {
   const dispatch = useDispatch();
 
   //? using nanoid
-  const id = nanoid();
 
   const [product, setProduct] = useState({
-    id: id,
     title: "",
     description: "",
     category: "",
     price: "",
   });
 
-  // console.log(product);
-
   useEffect(() => {
-    if (onupdateProduct) {
+    if (trgetProduct) {
       setProduct({
-        title: onupdateProduct.title || "",
-        description: onupdateProduct.description || "",
-        category: onupdateProduct.category || "",
-        price: onupdateProduct.price || "",
+        title: trgetProduct.title,
+        description: trgetProduct.description,
+        category: trgetProduct.category,
+        price: trgetProduct.price,
       });
     }
-  }, [onupdateProduct]);
+  }, [trgetProduct]);
 
   const handleInputChange = (e) => {
     setProduct({
@@ -43,14 +35,12 @@ const ProductForm = ({ onupdateProduct = {}, onisEdit = false }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Product Data:", product);
+
     if (onisEdit) {
-      dispatch(
-        updateProduct({
-          id: onupdateProduct.id,
-          product: onupdateProduct.product,
-        })
-      );
+      // ? one way
+      // dispatch(updateProduct(product.id, product));
+      // ? another way
+      dispatch(updateProduct({ id: trgetProduct.id, product: product }));
     } else {
       dispatch(createProduct({ ...product }));
     }

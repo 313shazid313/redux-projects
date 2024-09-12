@@ -15,10 +15,10 @@ const ProductsView = ({ onHandleSetProductEdt }) => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  console.log(products);
 
   const handleEdit = (product) => {
     onHandleSetProductEdt(product);
+    console.log(product);
   };
 
   return (
@@ -43,9 +43,7 @@ const ProductsView = ({ onHandleSetProductEdt }) => {
                       <button
                         type="button"
                         className="btn btn-outline-primary"
-                        onClick={() => {
-                          handleEdit(product);
-                        }}
+                        onClick={() => handleEdit(product)}
                       >
                         Edit
                       </button>{" "}
