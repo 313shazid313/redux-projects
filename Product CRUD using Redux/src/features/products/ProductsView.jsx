@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import { useEffect } from "react";
 import { fetchProducts, deleteProduct } from "./productsSlice";
 import { useDispatch, useSelector } from "react-redux";

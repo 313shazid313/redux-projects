@@ -3,9 +3,10 @@ import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
 import { createProduct } from "./productsSlice";
 import { updateProduct } from "./productsSlice";
+
 // eslint-disable-next-line react/prop-types
 const ProductForm = ({ onupdateProduct = {}, onisEdit = false }) => {
-  console.log(onupdateProduct);
+  // console.log(onupdateProduct);
   console.log(onisEdit);
   const dispatch = useDispatch();
 
@@ -20,7 +21,7 @@ const ProductForm = ({ onupdateProduct = {}, onisEdit = false }) => {
     price: "",
   });
 
-  console.log(product);
+  // console.log(product);
 
   useEffect(() => {
     if (onupdateProduct) {
@@ -44,9 +45,15 @@ const ProductForm = ({ onupdateProduct = {}, onisEdit = false }) => {
     e.preventDefault();
     console.log("Product Data:", product);
     if (onisEdit) {
-      dispatch(updateProduct({ id, product }));
+      dispatch(
+        updateProduct({
+          id: onupdateProduct.id,
+          product: onupdateProduct.product,
+        })
+      );
+    } else {
+      dispatch(createProduct({ ...product }));
     }
-    dispatch(createProduct({ ...product }));
   };
 
   return (
