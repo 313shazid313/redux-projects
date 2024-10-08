@@ -11,7 +11,6 @@ const initialState = {
 //* npm install json-server
 //* npx json-server -p 3000 -w src/database/db.json
 
-
 export const productsSlice = createSlice({
   name: "products",
   initialState,
