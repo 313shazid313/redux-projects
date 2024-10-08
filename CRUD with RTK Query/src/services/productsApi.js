@@ -12,4 +12,5 @@ export const productsApi = createApi({
   }),
 });
 
+// this is an usable hook
 export const { useGetProductsQuery } = productsApi;
