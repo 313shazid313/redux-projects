@@ -1,11 +1,13 @@
-import ViewProducts from "./features/products/ViewProducts"
+import ViewProducts from "./features/products/ViewProducts";
+import CreateProduct from "./features/products/CreateProduct";
 
 const App = () => {
   return (
     <>
-      <ViewProducts/>
+      <CreateProduct />
+      <ViewProducts />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,32 +1,11 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Essence Mascara Lash Princess",
-      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-      "category": "beauty",
-      "price": 9.99
-    },
-    {
-      "id": 2,
-      "title": "Eyeshadow Palette with Mirror",
-      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
-      "category": "beauty",
-      "price": 19.99
-    },
-    {
-      "id": 3,
-      "title": "Powder Canister",
-      "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
-      "category": "beauty",
-      "price": 14.99
-    },
-    {
-      "id": 4,
-      "title": "Red Lipstick",
-      "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
-      "category": "beauty",
-      "price": 12.99
+      "id": "Ihtene1ZQw6WuekjgLOC_",
+      "title": "iphone",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "category": "mobiles",
+      "price": "15000"
     }
   ]
 }
